@@ -158,8 +158,6 @@ Dieses Klassendiagramm wurde von Visual Paradigm 17.0 generiert und ich habe die
 
 In der Klassendokumentation werden die Klassen aus dem Diagramm noch ein Mal genauer Dokumentiert. Es wird erklärt für was sie zuständig sind und welche Felder, Eigentschaften und Methoden sie haben.
 
-Die Klassendokumentation ist [auf dieser Seite](Klassen.md) vorzufinden.
-
 ## Entscheiden
 
 ### Welches DBMS?
