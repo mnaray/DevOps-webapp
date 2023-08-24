@@ -65,7 +65,7 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 | Nr. | Frist      | Beschreibung                                                                                                        | Geplante Zeit in Paketen |
 | ----- | ------------ | :-------------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                        | 10                       |
-| 2   | 24.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10                       |
+| 2   | 31.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10                       |
 | 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15                       |
 | 3.2 | 7.09.2023  | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11                       |
 | 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4                        |
