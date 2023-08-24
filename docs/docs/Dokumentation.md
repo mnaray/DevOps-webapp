@@ -41,9 +41,10 @@ Für dieses Projekt habe ich folgende Technologien verwendet:
 - [Svelte](https://svelte.dev)
 - [GitHub](https://github.com)
 - [Snyk](https://snyk.io/de/)
-- [Node.js](https://nodejs.org)
+- [NPM](https://www.npmjs.com/)
 - [Selenium](https://www.selenium.dev/)
 - [Jest](https://jestjs.io/)
+- [ESLint](https://eslint.org/)
 
 ### Quellen
 
@@ -54,6 +55,7 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 - [Svelte Testing mit Jest](https://timdeschryver.dev/blog/how-to-test-svelte-components#jest-setuphttps://sveltesociety.dev/recipes/testing-and-debugging/unit-testing-svelte-componen)
 - [GitHub Actions Dokumentation](https://docs.github.com/de/actions)
 - [Snyk Dokumentation](https://docs.snyk.io/)
+- [ESLint und Prettier mit Svelte](https://mvolkmann.github.io/blog/svelte/eslint-prettier/)
 
 ## Planen
 
@@ -108,7 +110,22 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 
 ### Welche API?
 
+Uns standen verschiedene APIs zur Verfügung. Viele waren zwar interessant, hatten jedoch ein tiefes Rate-Limit. Wir sind auf der Suche nach einer kostenlosen API, die sich für dieses Projekt eignet auf [API Ninjas](https://api-ninjas.com/) gestossen. Auf dieser Seite gibt es eine grosse Auswahl an APIs. Wir fanden die Jokes-API und die Trivia-API perfekt für unsere *einfache* Anwendung.
+
+Die Jokes-API hat zwar ein sehr einfaches Interface, jedoch nur ein einziges Feld für die Datensätze. Dies ist zwar toll für eine schnelle und möglichst fehlerfreie Implementierung, aber dabei würden wir ja die Tools in der Pipeline gradezu nicht nutzen müssen.  
+Deshalb entschieden wir uns für die Trivia-API. Diese hat drei Felder: `category`, `question` und `answer`. Das gibt ein bisschen mehr zu programmieren in der Realisierungsphase, da wir noch z.B. einen Kategoriefilter einbauen können.
+
 ### Welche Pipeline Integrationen?
+
+Die Pipelines in den GitHub-Actions sind das Zentrum von diesem Projekt. Wir möchten welche aufsetzen, die ein wenig anspruchsvoller in der Umsetzung sind, damit wir unsere Kenntnisse besser entwickeln können.
+
+Wir haben uns dafür entschieden, die Anwendung in einer Cloud zu hosten, dort, wo Webanwendungen im alltäglichen Betrieb laufen. Wir möchten, dass die Pipeline die Änderungen auf dem `main`-Branch nach jeder Pullrequest in die Cloud deployt. Für unseren Use-Case können wir dafür die [Deta-Space](https://deta.space) Cloud mit ihrem [Workflow für das Pushen von Änderungen](https://github.com/marketplace/actions/deta-space-deployment-github-action) verwenden.
+
+Da unser Projekt eine Webanwendung mit vielen Dependencies ist, gehört auch ein Security-Check dazu. Hierfür möchten wir [Snyk](https://snyk.io/de) in die Pipeline einbauen.
+
+In Sachen Testing gibt es zwei bereiche, für die wir uns hier Interessieren; Das Testen der Code-Logik und das Testen der Nutzeroberfläche. Für alles was mit Logik zu tun hat, werden wir [Jest](https://jest.io) einsetzen. Bei allem was mit der Nutzeroberfläche zu tun hat, werden wir [Selenium](https://www.selenium.dev) einsetzen. Diese beiden Tools möchten wir auch in die Pipeline inebauen.
+
+Damit wir in der Gruppe dieselben Code-Konventionen einhalten können, möchten wir auch [ESlint](https://eslint.org) integrieren. Das nicht nur lokal, sondern auch in der Pipeline, damit nur sauberer Code in die Cloud kommt.
 
 ## Realisieren
 
