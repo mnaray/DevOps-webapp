@@ -6,7 +6,7 @@ title: Dokumentation
 
 Dies ist die Dokumentation des Projekts. Sie wurde nach IPERKA umgesetzt. Es wird der Ablauf und die Vorgehensweise des ganzen Projekts dokumentiert.
 
-In diesem Projekt erstellen wir eine kleine Webanwendung welche Witze aus einer Datenbank fetcht und dann auf der dazugehörigen Seite ausgibt. Der Fokus liegt jedoch bei den verwendeten DevOps-Tools wie CI Pipelines und dem Deployment. Es geht vor allem um die Verwendung von DevOps-Tools.
+In diesem Projekt erstellen wir eine kleine Webanwendung welche Trivia-Fragen verschiedener Kategorien aus einer Datenbank fetcht und dann auf der dazugehörigen Seite ausgibt. Der Fokus liegt jedoch bei den verwendeten DevOps-Tools.
 
 :::
 
@@ -20,9 +20,9 @@ DevOps-Tools sind Softwarewerkzeuge, die verwendet werden, um die Kluft zwischen
 
 ### Was ist unser Ziel?
 
-In diesem Projekt unser Ziel, eine einfache, funktionsfähige SPA zu erstellen. Sie soll beim öffnen Witze vin einer API fetchen und diese dann auf der Seite anzeigen.
+In diesem Projekt unser Ziel, eine einfache, funktionsfähige SPA zu erstellen. Sie soll beim Daten von einer API fetchen und diese dann auf der Seite anzeigen.
 
-Dabei möchten wir den ganzen Prozess über DevOps-Tools verwenden, um die Entwicklung einfacher zu gestalten. Wir wollen uns in das Modul 324 (DevOps-Prozesse mit Tools unterstützen) vertiefen und dadurch eine bessere Note an der Leistungsbeurteilung erzielen.
+Dabei möchten wir über den ganzen Prozess hinweg DevOps-Tools verwenden, um die Entwicklung einfacher zu gestalten. Wir wollen uns in das Modul 324 (DevOps-Prozesse mit Tools unterstützen) vertiefen und dadurch eine bessere Note an der Leistungsbeurteilung erzielen.
 
 ### Anforderungen
 
