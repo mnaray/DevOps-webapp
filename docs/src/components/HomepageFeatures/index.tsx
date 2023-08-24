@@ -19,18 +19,7 @@ const FeatureList: FeatureItem[] = [
                     IPERKA-Workflow
                 </a>{" "}
                 umgesetzt und entsprechend begleitend{" "}
-                <a href="/Bookkeeper_OOP/docs/Dokumentation">dokumentiert</a>.
-            </>
-        )
-    },
-    {
-        title: "Klassen",
-        Svg: require("@site/static/img/lightbulb.svg").default,
-        description: (
-            <>
-                Die einzelnen Klassen der Applikation sind in der{" "}
-                <a href="/Bookkeeper_OOP/docs/Klassen">Klassendokumentation</a> ersichtlich. Jede
-                Klasse wird beschrieben und ihre Funktion wird erläutert.
+                <a href="/DevOps-webapp/docs/Dokumentation">dokumentiert</a>.
             </>
         )
     }

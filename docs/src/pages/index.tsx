@@ -24,7 +24,7 @@ export default function Home(): JSX.Element {
     return (
         <Layout
             title={`Hallo von ${siteConfig.title}`}
-            description="Dokumentation zu meiner Buchhaltungsapp"
+            description="Dokumentation zu unserer DevOps-Webapp"
         >
             <HomepageHeader />
             <main>
