@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Bookkeeper OOP",
+    title: "DevOps Webapp",
     tagline: "",
     favicon: "img/favicon.ico",
 
@@ -14,12 +14,12 @@ const config = {
     url: "https://mnaray.github.io",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: "/Bookkeeper_OOP/",
+    baseUrl: "/DevOps-webapp/",
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: "mnaray", // Usually your GitHub org/user name.
-    projectName: "Bookkeeper_OOP", // Usually your repo name.
+    projectName: "DevOps-webapp", // Usually your repo name.
     trailingSlash: false, // Enables the default trailing slash.
 
     onBrokenLinks: "throw",
@@ -42,7 +42,7 @@ const config = {
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
-                    editUrl: "https://github.com/mnaray/Bookkeeper_OOP/edit/main/docs/"
+                    editUrl: "https://github.com/mnaray/DevOps-webapp/edit/main/docs/"
                 },
                 blog: false,
                 theme: {
@@ -56,12 +56,12 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             // Replace with your project's social card
-            image: "img/logo.svg",
+            image: "img/logo.png",
             navbar: {
-                title: "Bookkeeper OOP",
+                title: "DevOps Webapp",
                 logo: {
-                    alt: "Flag",
-                    src: "img/logo.svg"
+                    alt: "CI/CD",
+                    src: "img/logo.png"
                 },
                 items: [
                     {
@@ -71,13 +71,7 @@ const config = {
                         label: "Dokumentation"
                     },
                     {
-                        type: "doc",
-                        docId: "Klassen",
-                        position: "left",
-                        label: "Klassendokumentation"
-                    },
-                    {
-                        href: "https://github.com/mnaray/Bookkeeper_OOP",
+                        href: "https://github.com/mnaray/DevOps-webapp",
                         label: "GitHub",
                         position: "right"
                     }
@@ -92,10 +86,6 @@ const config = {
                             {
                                 label: "Projektdokumentaion",
                                 to: "/docs/Dokumentation"
-                            },
-                            {
-                                label: "Klassendokumentation",
-                                to: "/docs/Klassen"
                             }
                         ]
                     },
@@ -103,12 +93,12 @@ const config = {
                         title: "Socials",
                         items: [
                             {
-                                label: "GitHub Profil",
+                                label: "GitHub Profil Naray",
                                 href: "https://github.com/mnaray/"
                             },
                             {
-                                label: "LinkedIn Profil",
-                                href: "https://www.linkedin.com/in/marton-naray-9bb014212/"
+                                label: "GitHub Profil Delvecchio",
+                                href: "https://github.com/h0peRL"
                             }
                         ]
                     },
@@ -117,12 +107,12 @@ const config = {
                         items: [
                             {
                                 label: "Repository auf GitHub",
-                                href: "https://github.com/mnaray/Bookkeeper_OOP"
+                                href: "https://github.com/mnaray/DevOps-webapp"
                             }
                         ]
                     }
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} mnaray/Bookkeeper_OOP | Dokumenatation wurde mit Docusaurus erstellt.`
+                copyright: `Copyright © ${new Date().getFullYear()} mnaray/DevOps-webapp | Dokumenatation wurde mit Docusaurus erstellt.`
             },
             prism: {
                 theme: lightCodeTheme,
