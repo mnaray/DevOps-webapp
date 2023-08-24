@@ -150,22 +150,6 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 
 ### Architektur
 
-#### Klassendiagramm
-
-![Klassendiagramm](../../VisualParadigm_diagramms/Bookkeeper_automatisches_Klassendiagramm.png)
-
-##### Model Close-Up
-
-![Model close-up](assets/20230609_200725_image.png)
-
-##### View Close-Up
-
-![View close-up](assets/20230609_200912_image.png)
-
-##### Controller Close-Up
-
-![Controller close-up](assets/20230609_200931_image.png)
-
 :::info
 Dieses Klassendiagramm wurde von Visual Paradigm 17.0 generiert und ich habe die Relationen und die Abhängigkeiten noch von Hand ergänzt. Das Bild und das .vpp-Dokument sind in [diesem Folder](https://github.com/mnaray/Bookkeeper_OOP/tree/main/VisualParadigm_diagramms) vorzufinden. *(Die Parameter für Konstruktoren und Methoden sind im Projekt sichtbar, wenn man auf diese klickt.)*
 :::
