@@ -97,10 +97,20 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 
 ### Testfälle
 
-
-| Testf.<br />Nr. | Anf.<br />Nr. | Voraussetzungen | Testumgebung | Eingabe/Aktion | Erw. Ausgabe |
-| --------------- | ------------- | --------------- | ------------ | -------------- | ------------ |
-|                 |               |                 |              |                |              |
+| Testf.<br />Nr. | Anf.<br />Nr. | Voraussetzungen                  | Testumgebung                                      | Eingabe/Aktion                          | Erw. Ausgabe                                  |
+| ----------------- | --------------- | ---------------------------------- | --------------------------------------------------- | ----------------------------------------- | :---------------------------------------------- |
+| 1               | 1             | -                                | Actions, Vite                                     | PR in main                              | Pipeline erstellt Build.                      |
+| 2               | 2             | Build ist als Artefakt vorhanden | Deta Space, Actions                               | Pipeline erstellt Build.                | Revision auf Deta                             |
+| 3               | 3             | -                                | ESLint, Prettier, Actions                         | PR eröffnen                            | Pipeline lintet Code                          |
+| 4               | 4             | -                                | Vite                                              | PR in main                              | Unittests werden durchgeführt                |
+| 5               | 5             | -                                | Playwright                                        | PR in main                              | Integrationstzests werden durchgeführt       |
+| 6.1             | 6             | Tests werden ausgeführt         | Actions, Vite, ESLint, Prettier, Playwright, Snyk | PR in main, Tests erfoglgen, PR in main | Pipeline erstellt Build.                      |
+| 6.2             | 6             | Tests werden ausgeführt         | Actions, Vite, ESLint, Prettier, Playwright, Snyk | PR in main, Tests failen.               | PR abgelehnt. Pipeline erstellt keinen Build. |
+| 7               | 7             | -                                | Snyk                                              | PR in main                              | Anwendung wird auf Vulnerabilities getestet   |
+| 8               | 8             |   -                               | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.          |
+| 9               | 9             | -                                | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.          |
+| 10              | 10            | -                                | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.          |
+| 11              | 11            | -                                | Playwright                                        | PR in main                              | Test für diese Anforderung erfolgreich.          |
 
 #### Testumgebungen
 
