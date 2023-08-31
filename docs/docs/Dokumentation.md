@@ -30,7 +30,7 @@ In der folgenden Tabelle sind die Anforderungen für das Projekt.
 
 
 | Nr. | Muss/<br />Kann | funk./<br />qual./ rand | Beschreibung |
-| ----- | ----------------- | ------------------------- | -------------- |
+| --- | --------------- | ----------------------- | ------------ |
 |     |                 |                         |              |
 
 ### Technologien
@@ -42,9 +42,10 @@ Für dieses Projekt habe ich folgende Technologien verwendet:
 - [GitHub](https://github.com)
 - [Snyk](https://snyk.io/de/)
 - [NPM](https://www.npmjs.com/)
-- [Selenium](https://www.selenium.dev/)
-- [Jest](https://jestjs.io/)
+- [Playwright](https://playwright.dev/)
+- [Vite](https://vitejs.dev/)
 - [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
 ### Quellen
 
@@ -52,25 +53,23 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 
 - [Deta Space Dokumentation](https://deta.space/docs/en)
 - [Svelte Dokumentation](https://svelte.dev/docs/introduction)
-- [Svelte Testing mit Jest](https://timdeschryver.dev/blog/how-to-test-svelte-components#jest-setuphttps://sveltesociety.dev/recipes/testing-and-debugging/unit-testing-svelte-componen)
 - [GitHub Actions Dokumentation](https://docs.github.com/de/actions)
 - [Snyk Dokumentation](https://docs.snyk.io/)
-- [ESLint und Prettier mit Svelte](https://mvolkmann.github.io/blog/svelte/eslint-prettier/)
 
 ## Planen
 
 ### Arbeitspakete
 
 
-| Nr. | Frist      | Beschreibung                                                                                                        | Geplante Zeit in Paketen |
-| ----- | ------------ | :-------------------------------------------------------------------------------------------------------------------- | -------------------------- |
-| 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                        | 10                       |
+| Nr. | Frist      | Beschreibung                                                                                                       | Geplante Zeit in Paketen |
+| --- | ---------- | :----------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                       | 10                       |
 | 2   | 31.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10                       |
-| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15                       |
-| 3.2 | 7.09.2023  | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11                       |
+| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                               | 15                       |
+| 3.2 | 7.09.2023  | Realisieren (von IPERKA): Webapp implementieren                                                                    | 11                       |
 | 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4                        |
-| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4                        |
-| 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                       | 6 (ggf. mehr)            |
+| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                  | 4                        |
+| 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                      | 6 (ggf. mehr)            |
 
 :::info
 
@@ -88,7 +87,7 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 
 
 | Testf.<br />Nr. | Anf.<br />Nr. | Voraussetzungen | Testumgebung | Eingabe/Aktion | Erw. Ausgabe |
-| ----------------- | --------------- | ----------------- | -------------- | ---------------- | -------------- |
+| --------------- | ------------- | --------------- | ------------ | -------------- | ------------ |
 |                 |               |                 |              |                |              |
 
 #### Testumgebungen
@@ -123,9 +122,9 @@ Wir haben uns dafür entschieden, die Anwendung in einer Cloud zu hosten, dort, 
 
 Da unser Projekt eine Webanwendung mit vielen Dependencies ist, gehört auch ein Security-Check dazu. Hierfür möchten wir [Snyk](https://snyk.io/de) in die Pipeline einbauen.
 
-In Sachen Testing gibt es zwei bereiche, für die wir uns hier Interessieren; Das Testen der Code-Logik und das Testen der Nutzeroberfläche. Für alles was mit Logik zu tun hat, werden wir [Jest](https://jest.io) einsetzen. Bei allem was mit der Nutzeroberfläche zu tun hat, werden wir [Selenium](https://www.selenium.dev) einsetzen. Diese beiden Tools möchten wir auch in die Pipeline inebauen.
+In Sachen Testing gibt es zwei bereiche, für die wir uns hier Interessieren; Das Testen der Code-Logik und das Testen der Nutzeroberfläche. Für alles was mit Logik zu tun hat, werden wir [Vitest](https://vitest.dev/) einsetzen. Bei allem was mit der Nutzeroberfläche zu tun hat, werden wir [Playwright](https://playwright.dev/) einsetzen. Diese beiden Tools möchten wir auch in die Pipeline einbauen.
 
-Damit wir in der Gruppe dieselben Code-Konventionen einhalten können, möchten wir auch [ESlint](https://eslint.org) integrieren. Das nicht nur lokal, sondern auch in der Pipeline, damit nur sauberer Code in die Cloud kommt.
+Damit wir in der Gruppe dieselben Code-Konventionen einhalten können, möchten wir auch [ESlint](https://eslint.org) und [Prettier](https://prettier.io/) integrieren. Das nicht nur lokal, sondern auch in der Pipeline, damit nur sauberer Code in die Cloud kommt.
 
 ## Realisieren
 
@@ -147,7 +146,7 @@ Da hier der DevOps-Prozess im Mittelpunkt steht . . .
 
 
 | Nr. | Frist | Bemerkung | Zeit geplant | Zeit effektiv |
-| ----- | ------- | ----------- | -------------- | --------------- |
+| --- | ----- | --------- | ------------ | ------------- |
 |     |       |           |              |               |
 
 ## Kontrollieren
@@ -156,7 +155,7 @@ Da hier der DevOps-Prozess im Mittelpunkt steht . . .
 
 
 | <br />Test-Nr. | Bemerkung | Resultat | Datum | Visum |
-| ---------------- | ----------- | ---------- | ------- | ------- |
+| -------------- | --------- | -------- | ----- | ----- |
 |                |           |          |       |       |
 
 ### Testfazit
