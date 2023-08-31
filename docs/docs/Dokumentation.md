@@ -29,9 +29,21 @@ Dabei möchten wir über den ganzen Prozess hinweg DevOps-Tools verwenden, um di
 In der folgenden Tabelle sind die Anforderungen für das Projekt.
 
 
-| Nr. | Muss/<br />Kann | funk./<br />qual./ rand | Beschreibung |
-| --- | --------------- | ----------------------- | ------------ |
-|     |                 |                         |              |
+| Nr. | Muss/<br />Kann | funk./<br />qual./ rand | Beschreibung                                                                     |
+| --- | --------------- | ----------------------- | :------------------------------------------------------------------------------- |
+| 1   | M               | funk.                   | Die Anwendung soll durch eine Pipeline bereitgestellt werden.                    |
+| 2   | M               | funk.                   | Die Anwendung soll durch eine Pipeline automatisch deployed werden.              |
+| 3   | M               | funk.                   | Die Anwendung soll vor der Bereitstellung gelintet werden.                       |
+| 4   | M               | funk.                   | Vor dem Bereitstellen sollen Unittests durchgeführt werden.                      |
+| 5   | M               | funk.                   | Vor dem Bereitstellen sollen Integrationstests durchgeführt werden.              |
+| 6   | M               | qual.                   | Die Anwendung soll nur bereitgestellt werden, wenn alle Tests erfolgreich waren. |
+| 7   | M               | qual.                   | Die Anwendung soll in der Pipeline auf Vulnerabilities getestet werden.          |
+| 8   | M               | qual.                   | Die Anwendung soll einen HTML-Titel(`<h1>`) haben.                               |
+| 9   | M               | rand                    | Die Anwendung soll eine API integriert haben.                                    |
+| 10  | M               | funk.                   | Die Anwendung soll mindestens ein Objekt von dieser API fetchen können.          |
+| 11  | M               | funk.                   | Die Anwendung soll alle gefetchten Objekte im UI darstellen können.              |
+| 12  | M               | rand                    | Der Cloudanbieter soll Deta sein.                                                |
+| 13  | M               | rand                    | Die Anwendung soll mit SvelteKit erstellt sein.                                  |
 
 ### Technologien
 
@@ -111,7 +123,7 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 
 Uns standen verschiedene APIs zur Verfügung. Viele waren zwar interessant, hatten jedoch ein tiefes Rate-Limit. Wir sind auf der Suche nach einer kostenlosen API, die sich für dieses Projekt eignet auf [API Ninjas](https://api-ninjas.com/) gestossen. Auf dieser Seite gibt es eine grosse Auswahl an APIs. Wir fanden die Jokes-API und die Trivia-API perfekt für unsere *einfache* Anwendung.
 
-Die Jokes-API hat zwar ein sehr einfaches Interface, jedoch nur ein einziges Feld für die Datensätze. Dies ist zwar toll für eine schnelle und möglichst fehlerfreie Implementierung, aber dabei würden wir ja die Tools in der Pipeline gradezu nicht nutzen müssen.  
+Die Jokes-API hat zwar ein sehr einfaches Interface, jedoch nur ein einziges Feld für die Datensätze. Dies ist zwar toll für eine schnelle und möglichst fehlerfreie Implementierung, aber dabei würden wir ja die Tools in der Pipeline gradezu nicht nutzen müssen.
 Deshalb entschieden wir uns für die Trivia-API. Diese hat drei Felder: `category`, `question` und `answer`. Das gibt ein bisschen mehr zu programmieren in der Realisierungsphase, da wir noch z.B. einen Kategoriefilter einbauen können.
 
 ### Welche Pipeline Integrationen?
