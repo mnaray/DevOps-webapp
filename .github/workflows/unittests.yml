@@ -1,29 +1,23 @@
 name: Vitest Unittests
 
 defaults:
-  run:
-    working-directory: ./src
+    run:
+        working-directory: ./src
 
 on:
-  pull_request:
-    branches: main
+    pull_request:
+        branches: main
 
 jobs: # Source for parts of this job: https://www.the-koi.com/projects/setting-up-a-superfast-ci-with-vitest-and-github-actions/
-  unittests:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - name: Execute Unit tests
-      - run: npm ci
-	    - run: npm run test:unit
+    unittests:
+        timeout-minutes: 60
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+            - name: Install dependencies
+              run: npm ci
+            - name: Run Vitest tests
+              run: npm run test:unit
