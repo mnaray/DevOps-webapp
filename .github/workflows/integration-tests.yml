@@ -6,6 +6,8 @@ defaults:
 
 on:
     pull_request:
+        paths:
+            - "src/**"
         branches: main
 jobs:
     integration-tests:
