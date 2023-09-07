@@ -6,8 +6,6 @@ defaults:
 
 on:
     pull_request:
-        paths:
-            - "src/**"
         branches: main
 
 jobs: # Source for parts of this job: https://www.the-koi.com/projects/setting-up-a-superfast-ci-with-vitest-and-github-actions/
