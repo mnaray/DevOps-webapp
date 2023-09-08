@@ -67,6 +67,8 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 - [Svelte Dokumentation](https://svelte.dev/docs/introduction)
 - [GitHub Actions Dokumentation](https://docs.github.com/de/actions)
 - [Snyk Dokumentation](https://docs.snyk.io/)
+- [Vitest Dokumentation](https://vitest.dev/guide/)
+- [Playwright Dokumetation](https://playwright.dev/docs/intro)
 
 ## Planen
 
