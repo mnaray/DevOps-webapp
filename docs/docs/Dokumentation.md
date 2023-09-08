@@ -162,7 +162,11 @@ Die Anwendung . . .
 
 ### Vorgehen bei der Realisierung
 
-Da hier der DevOps-Prozess im Mittelpunkt steht . . .
+Da hier der DevOps-Prozess im Mittelpunkt steht haben wir Zuerst alle Pipelines, Tests und Tools mit einer Vorlage von Svelte aufgesetzt. Das alles musste natürlich noch vor der hauptsächlichen Entwicklung getestet und konfiguriert werden, damit der ganze Prozess sauber ablaufen kann. Ausserdem wurden noch Branch-Protection-Regeln eingestellt, damit keiner direkte Commits auf `main` machen kann.
+
+Im nächsten Schritt konnten wir mit der Entwicklung beginnen. Dabei haben wir für jede Aufgabe einen eigenen Branch erstellt, um Konflikte zu vermeiden. Jeder Branch musste über eine Pull-Request gemerget werden, wobei jegliche Tests in Pipelines durchgeführt wurden. Sobald alle Tests erfolgreich waren, konnte ein Merge in `main` vorgenommen werden, davor war es durch die Branch-Protection-Regeln blockiert.
+
+Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änderungen gab, auf GitHub-Pages deployed und die Svelte-App in die Cloud gepusht.
 
 ### Ausführung
 
