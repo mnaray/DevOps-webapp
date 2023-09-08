@@ -30,18 +30,18 @@ In der folgenden Tabelle sind die Anforderungen für das Projekt.
 
 
 | Nr. | Muss/<br />Kann | funk./<br />qual./ rand | Beschreibung                                                                     |
-| --- | --------------- | ----------------------- | :------------------------------------------------------------------------------- |
+| ----- | ----------------- | ------------------------- | :--------------------------------------------------------------------------------- |
 | 1   | M               | funk.                   | Die Anwendung soll durch eine Pipeline bereitgestellt werden.                    |
 | 2   | M               | funk.                   | Die Anwendung soll durch eine Pipeline automatisch deployed werden.              |
 | 3   | M               | funk.                   | Die Anwendung soll vor der Bereitstellung gelintet werden.                       |
-| 4   | M               | funk.                   | Vor dem Bereitstellen sollen Unittests durchgeführt werden.                      |
-| 5   | M               | funk.                   | Vor dem Bereitstellen sollen Integrationstests durchgeführt werden.              |
+| 4   | M               | funk.                   | Vor dem Bereitstellen sollen Unittests durchgeführt werden.                     |
+| 5   | M               | funk.                   | Vor dem Bereitstellen sollen Integrationstests durchgeführt werden.             |
 | 6   | M               | qual.                   | Die Anwendung soll nur bereitgestellt werden, wenn alle Tests erfolgreich waren. |
 | 7   | M               | qual.                   | Die Anwendung soll in der Pipeline auf Vulnerabilities getestet werden.          |
 | 8   | M               | qual.                   | Die Anwendung soll einen HTML-Titel(`<h1>`) haben.                               |
 | 9   | M               | rand                    | Die Anwendung soll eine API integriert haben.                                    |
-| 10  | M               | funk.                   | Die Anwendung soll mindestens ein Objekt von dieser API fetchen können.          |
-| 11  | M               | funk.                   | Die Anwendung soll alle gefetchten Objekte im UI darstellen können.              |
+| 10  | M               | funk.                   | Die Anwendung soll mindestens ein Objekt von dieser API fetchen können.         |
+| 11  | M               | funk.                   | Die Anwendung soll alle gefetchten Objekte im UI darstellen können.             |
 | 12  | M               | rand                    | Der Cloudanbieter soll Deta sein.                                                |
 | 13  | M               | rand                    | Die Anwendung soll mit SvelteKit erstellt sein.                                  |
 
@@ -73,15 +73,15 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 ### Arbeitspakete
 
 
-| Nr. | Frist      | Beschreibung                                                                                                       | Geplante Zeit in Paketen |
-| --- | ---------- | :----------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                       | 10                       |
+| Nr. | Frist      | Beschreibung                                                                                                        | Geplante Zeit in Paketen |
+| ----- | ------------ | :-------------------------------------------------------------------------------------------------------------------- | -------------------------- |
+| 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                        | 10                       |
 | 2   | 31.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10                       |
-| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                               | 15                       |
-| 3.2 | 7.09.2023  | Realisieren (von IPERKA): Webapp implementieren                                                                    | 11                       |
+| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15                       |
+| 3.2 | 14.09.2023 | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11                       |
 | 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4                        |
-| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                  | 4                        |
-| 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                      | 6 (ggf. mehr)            |
+| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4                        |
+| 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                       | 6 (ggf. mehr)            |
 
 :::info
 
@@ -97,6 +97,7 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 
 ### Testfälle
 
+
 | Testf.<br />Nr. | Anf.<br />Nr. | Voraussetzungen                  | Testumgebung                                      | Eingabe/Aktion                          | Erw. Ausgabe                                  |
 | ----------------- | --------------- | ---------------------------------- | --------------------------------------------------- | ----------------------------------------- | :---------------------------------------------- |
 | 1               | 1             | -                                | Actions, Vite                                     | PR in main                              | Pipeline erstellt Build.                      |
@@ -107,10 +108,10 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 | 6.1             | 6             | Tests werden ausgeführt         | Actions, Vite, ESLint, Prettier, Playwright, Snyk | PR in main, Tests erfoglgen, PR in main | Pipeline erstellt Build.                      |
 | 6.2             | 6             | Tests werden ausgeführt         | Actions, Vite, ESLint, Prettier, Playwright, Snyk | PR in main, Tests failen.               | PR abgelehnt. Pipeline erstellt keinen Build. |
 | 7               | 7             | -                                | Snyk                                              | PR in main                              | Anwendung wird auf Vulnerabilities getestet   |
-| 8               | 8             |   -                               | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.          |
-| 9               | 9             | -                                | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.          |
-| 10              | 10            | -                                | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.          |
-| 11              | 11            | -                                | Playwright                                        | PR in main                              | Test für diese Anforderung erfolgreich.          |
+| 8               | 8             | -                                | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.      |
+| 9               | 9             | -                                | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.      |
+| 10              | 10            | -                                | Playwright, Vite                                  | PR in main                              | Test für diese Anforderung erfolgreich.      |
+| 11              | 11            | -                                | Playwright                                        | PR in main                              | Test für diese Anforderung erfolgreich.      |
 
 #### Testumgebungen
 
@@ -171,9 +172,27 @@ Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änd
 ### Ausführung
 
 
-| Nr. | Frist | Bemerkung | Zeit geplant | Zeit effektiv |
-| --- | ----- | --------- | ------------ | ------------- |
-|     |       |           |              |               |
+| Nr. | Frist      | Beschreibung                                                                                                        | Geplante Zeit | Effektive Zeit |
+| ----- | ------------ | :-------------------------------------------------------------------------------------------------------------------- | --------------- | ---------------- |
+| 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                        | 10            | 10             |
+| 2   | 31.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10            | 10             |
+| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15            | 10             |
+| 3.2 | 14.09.2023 | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11            |                |
+| 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4             |                |
+| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4             |                |
+| 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                       | 6 (ggf. mehr) |                |
+
+:::info
+
+1x Arbeitspaket = 45 Minuten = 1x Schullektion
+
+1x Halbtag = 5x Arbeitspakete
+
+6x Halbtage = 30x Arbeitspakete
+
+30x Arbeitspakete * 2x Mitglieder = **60x Arbeitspakete**
+
+:::
 
 ## Kontrollieren
 
@@ -181,7 +200,7 @@ Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änd
 
 
 | <br />Test-Nr. | Bemerkung | Resultat | Datum | Visum |
-| -------------- | --------- | -------- | ----- | ----- |
+| ---------------- | ----------- | ---------- | ------- | ------- |
 |                |           |          |       |       |
 
 ### Testfazit
