@@ -121,17 +121,18 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 #### Testumgebungen
 
 - Visual Studio Code (VSC)
-  - Version: 1.78.2 (user setup)
-  - Commit: b3e4e68a0bc097f0ae7907b217c1119af9e03435
-  - Date: 2023-05-10T14:39:26.248Z
-  - Electron: 22.5.2
-  - Chromium: 108.0.5359.215
-  - Node.js: 16.17.1
-  - V8: 10.8.168.25-electron.0
+  - Version: 1.82.1 (user setup)
+  - Commit: 6509174151d557a81c9d0b5f8a5a1e9274db5585
+  - Date: 2023-09-08T08:45:05.575Z
+  - Electron: 25.8.0
+  - Chromium: 114.0.5735.289
+  - Node.js: 18.15.0
+  - V8: 11.4.183.29-electron.0
   - OS: Windows_NT x64 10.0.19045
-  - Sandboxed: Yes
 - Chrome (für PDFs und Dokumentation)
-  - Version: 114.0.5735.134 (Official Build) (64-bit)
+  - Version: 117.0.5938.63 (Official Build) (64-bit)
+- Node.js (für das Projekt)
+  - Version: v16.15.1
 
 ## Entscheiden
 
