@@ -155,6 +155,12 @@ In Sachen Testing gibt es zwei bereiche, für die wir uns hier Interessieren; Da
 
 Damit wir in der Gruppe dieselben Code-Konventionen einhalten können, möchten wir auch [ESlint](https://eslint.org) und [Prettier](https://prettier.io/) integrieren. Das nicht nur lokal, sondern auch in der Pipeline, damit nur sauberer Code in die Cloud kommt.
 
+### Sollen wir Git-Hooks verwenden?
+
+Wir haben in der Zwischenzeit über Git-Hooks im Modul 324 gelernt. Wir haben uns dafür entschieden, diese für das Code-Styling zu verwenden. So ist es nicht möglich, nicht den Konventionen entsprechenden Code einzubuchen, da vor jedem Commit formatiert und dann gelintet wird.
+
+Für die pre-Commit Hooks wird [Husky](https://www.npmjs.com/package/husky) verwendet. So kann das Script einfach von Menschen gelesen und bearbeitet werden, ohne in das `.git/hooks/` directory wechseln zu müssen. Das Aufsetzen in einer frisch gecloneten Repository ist auch schnell gemacht mit `npm run prepare`.
+
 ## Realisieren
 
 ### Hilfestellung
@@ -165,7 +171,9 @@ So konnten wir schlussendlich alle Hürden, die während der Implementation aufg
 
 ### Was wurde realisiert?
 
-Die Anwendung . . .
+Die Anwendung, die realisiert wurde, besteht aus einem Svelte-Kit Projekt, das Fragen von einer API lädt und diese darstellt als Komponenten.
+
+Für die Implementierung dieser Anwendung wurden diverse Pipelines für die CI und CD aufgesetzt. Zu diesen gehören zum Beispiel das Testen vor dem Mergen einer PR und das automatische Deployen, sobald etwas neues eingetragen wurde. Ausserdem wurde noch ein pre-Commit Hook eingebunden, damit der Code vor jedem Commit formatiert und gelintet werden kann.
 
 ### Vorgehen bei der Realisierung
 
@@ -183,7 +191,7 @@ Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änd
 | 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                        | 10            | 10             |
 | 2   | 31.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10            | 10             |
 | 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15            | 10             |
-| 3.2 | 14.09.2023 | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11            |                |
+| 3.2 | 14.09.2023 | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11            | 13             |
 | 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4             |                |
 | 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4             |                |
 | 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                       | 6 (ggf. mehr) |                |
