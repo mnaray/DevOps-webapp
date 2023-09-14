@@ -58,6 +58,7 @@ Für dieses Projekt habe ich folgende Technologien verwendet:
 - [Vite](https://vitejs.dev/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [Husky Git-Hooks](https://www.npmjs.com/package/husky)
 
 ### Quellen
 
@@ -69,6 +70,8 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 - [Snyk Dokumentation](https://docs.snyk.io/)
 - [Vitest Dokumentation](https://vitest.dev/guide/)
 - [Playwright Dokumetation](https://playwright.dev/docs/intro)
+- [Husky Dokumentation](https://typicode.github.io/husky/guide.html)
+- [Veränderungen einbuchen nach Formatierung in Hooks](https://stackoverflow.com/questions/71753958/git-add-same-files-in-precommit-after-formatting-cannot-add-deleted-files)
 
 ## Planen
 
