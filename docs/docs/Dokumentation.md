@@ -190,11 +190,11 @@ Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änd
 | ----- | ------------ | :-------------------------------------------------------------------------------------------------------------------- | --------------- | ---------------- |
 | 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                        | 10            | 10             |
 | 2   | 31.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10            | 10             |
-| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15            | 10             |
+| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15            | 11             |
 | 3.2 | 14.09.2023 | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11            | 13             |
-| 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4             |                |
-| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4             |                |
-| 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                       | 6 (ggf. mehr) |                |
+| 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4             | 5              |
+| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4             | 5              |
+| 6   | 21.09.2023 | Portfolioeintrag                                                                                                    | 6 (ggf. mehr) | 6              |
 
 :::info
 
@@ -213,20 +213,31 @@ Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änd
 ### Testprotokoll
 
 
-| <br />Test-Nr. | Bemerkung | Resultat | Datum | Visum |
-| ---------------- | ----------- | ---------- | ------- | ------- |
-|                |           |          |       |       |
+| <br />Test-Nr. | Bemerkung                                   | Resultat | Datum      | Visum |
+| ---------------- | --------------------------------------------- | ---------- | ------------ | ------- |
+| 1              |                                             | OK       | 21.09.2023 | MN    |
+| 2              |                                             | OK       | 21.09.2023 | MN    |
+| 3              |                                             | OK       | 21.09.2023 | MN    |
+| 4              |                                             | OK       | 21.09.2023 | MN    |
+| 5              |                                             | OK       | 21.09.2023 | MN    |
+| 6.1            | Ohne Snyk ausgeführt.                      | OK       | 21.09.2023 | MN    |
+| 6.2            | Ohne Snyk ausgeführt.                      | OK       | 21.09.2023 | MN    |
+| 7              | Nicht ausgeführt, da nichts implementiert. | NOK      | 21.09.2023 | MN    |
+| 8              |                                             | OK       | 21.09.2023 | MN    |
+| 9              |                                             | OK       | 21.09.2023 | MN    |
+| 10             |                                             | OK       | 21.09.2023 | MN    |
+| 11             |                                             | OK       | 21.09.2023 | MN    |
 
 ### Testfazit
 
-. . .
+Die Tests konnten alle erfolgreich durchgeführt werden. Nur die Teile, die Snyk brauchten konnten nicht implementiert und somit auch nicht getestet werden.
+
+Dies soll noch bei einer zukünftigen Gelegenheit erweitert werden.
 
 ## Auswerten
 
-### Produkt
+Wir haben uns [hier](#was-ist-unser-ziel) vorgenommen, dass ich wir eine einfache SPA erstellen und dabei den Fokus auf [DevOps](#was-versteht-man-unter-devops-tools) setzen.
 
-Wir haben uns [hier](#was-ist-unser-ziel) vorgenommen, dass ich . . .
+Dies ist uns gelungen, indem wir verschiedene Pipelines aufgesetzt haben, für die Continuous-Integration als auch für das Continuous-Deployment. Zusätzlich konnten wir noch Git-Hooks einbauen, damit wir das Code-Styling sicherstellen konnten.
 
-### Arbeitsprozess
-
-Während diesem Projekt haben wir viel neues gelernt . . .
+Leider haben wir es aber aus zeitlichen Gründen nicht geschafft Synk zu integrieren. Wir haben Snyk vernachlässigt, da schon andere Tools wie statische Code-Analyzen und der Dependabot von GitHub ähnliche Dinge tun.
