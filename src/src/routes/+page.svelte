@@ -1,5 +1,5 @@
 <script>
-	import Counter from './Counter.svelte';
+	import APIfetch from './APIfetch.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
@@ -17,15 +17,14 @@
 				<img src={welcome_fallback} alt="Welcome" />
 			</picture>
 		</span>
-
-		to your new<br />DevOps app
+		Welcome to your new<br />DevOps app
 	</h1>
 
 	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
+		<strong>API-fetch incoming..., try to solve the question</strong>
 	</h2>
 
-	<Counter />
+	<APIfetch />
 </section>
 
 <style>
