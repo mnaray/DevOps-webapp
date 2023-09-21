@@ -190,11 +190,11 @@ Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änd
 | ----- | ------------ | :-------------------------------------------------------------------------------------------------------------------- | --------------- | ---------------- |
 | 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                        | 10            | 10             |
 | 2   | 31.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10            | 10             |
-| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15            | 10             |
+| 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15            | 11             |
 | 3.2 | 14.09.2023 | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11            | 13             |
-| 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4             |                |
-| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4             |                |
-| 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                       | 6 (ggf. mehr) |                |
+| 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4             | 5              |
+| 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4             | 5              |
+| 6   | 21.09.2023 | Portfolioeintrag                                                                                                    | 6 (ggf. mehr) | 6              |
 
 :::info
 
