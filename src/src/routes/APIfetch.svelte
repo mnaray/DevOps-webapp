@@ -1,25 +1,17 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { APIFetch } from './APIFetch';
+	import type { Question } from './APIFetch';
 	// eslint-disable-next-line
-	let triviaQuestions: any[] = [];
-
+	let triviaQuestions: Question[] = [];
 	onMount(async () => {
 		const category = 'general';
 		const apiKey = '';
-
-		try {
-			const response = await fetch(
-				`https://api.api-ninjas.com/v1/trivia?category=${category}&limit=10`,
-				{
-					headers: {
-						'X-Api-Key': apiKey
-					}
-				}
-			);
-			const data = await response.json();
-			triviaQuestions = data;
-		} catch (error) {
-			console.error('Fehler beim Abrufen der Fragen:', error);
+		const response = await APIFetch(apiKey, category);
+		if (triviaQuestions === undefined) {
+			throw new Error('No questions found');
+		} else {
+			triviaQuestions = response as Question[];
 		}
 	});
 </script>
