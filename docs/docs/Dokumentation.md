@@ -236,10 +236,8 @@ Dies soll noch bei einer zukünftigen Gelegenheit erweitert werden.
 
 ## Auswerten
 
-### Produkt
+Wir haben uns [hier](#was-ist-unser-ziel) vorgenommen, dass ich wir eine einfache SPA erstellen und dabei den Fokus auf [DevOps](#was-versteht-man-unter-devops-tools) setzen.
 
-Wir haben uns [hier](#was-ist-unser-ziel) vorgenommen, dass ich . . .
+Dies ist uns gelungen, indem wir verschiedene Pipelines aufgesetzt haben, für die Continuous-Integration als auch für das Continuous-Deployment. Zusätzlich konnten wir noch Git-Hooks einbauen, damit wir das Code-Styling sicherstellen konnten.
 
-### Arbeitsprozess
-
-Während diesem Projekt haben wir viel neues gelernt . . .
+Leider haben wir es aber aus zeitlichen Gründen nicht geschafft Synk zu integrieren. Wir haben Snyk vernachlässigt, da schon andere Tools wie statische Code-Analyzen und der Dependabot von GitHub ähnliche Dinge tun.
