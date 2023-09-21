@@ -17,7 +17,7 @@
 				<img src={welcome_fallback} alt="Welcome" />
 			</picture>
 		</span>
-		Welcome to DevOps-Webapp
+		Welcome to your new<br />DevOps app
 	</h1>
 
 	<h2>

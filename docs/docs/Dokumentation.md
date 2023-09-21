@@ -20,9 +20,9 @@ DevOps-Tools sind Softwarewerkzeuge, die verwendet werden, um die Kluft zwischen
 
 ### Was ist unser Ziel?
 
-In diesem Projekt unser Ziel, eine einfache, funktionsfähige SPA zu erstellen. Sie soll beim Daten von einer API fetchen und diese dann auf der Seite anzeigen.
+In diesem Projekt unser Ziel, eine einfache, funktionsfähige SPA zu erstellen. Sie soll Daten von einer API fetchen und diese dann auf der Seite anzeigen.
 
-Dabei möchten wir über den ganzen Prozess hinweg DevOps-Tools verwenden, um die Entwicklung einfacher zu gestalten. Wir wollen uns in das Modul 324 (DevOps-Prozesse mit Tools unterstützen) vertiefen und dadurch eine bessere Note an der Leistungsbeurteilung erzielen.
+Dabei möchten wir über den ganzen Prozess hinweg DevOps-Tools verwenden, um die Entwicklung einfacher zu gestalten. Wir wollen uns in das Modul 324 (DevOps-Prozesse mit Tools unterstützen) vertiefen und unsere Kenntnisse somit erweitern.
 
 ### Anforderungen
 
@@ -58,6 +58,7 @@ Für dieses Projekt habe ich folgende Technologien verwendet:
 - [Vite](https://vitejs.dev/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [Husky Git-Hooks](https://www.npmjs.com/package/husky)
 
 ### Quellen
 
@@ -69,6 +70,8 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 - [Snyk Dokumentation](https://docs.snyk.io/)
 - [Vitest Dokumentation](https://vitest.dev/guide/)
 - [Playwright Dokumetation](https://playwright.dev/docs/intro)
+- [Husky Dokumentation](https://typicode.github.io/husky/guide.html)
+- [Veränderungen einbuchen nach Formatierung in Hooks](https://stackoverflow.com/questions/71753958/git-add-same-files-in-precommit-after-formatting-cannot-add-deleted-files)
 
 ## Planen
 
@@ -118,17 +121,18 @@ Hier sind alle Quellen aufgelistet, welche während dem Aublauf des Projekts als
 #### Testumgebungen
 
 - Visual Studio Code (VSC)
-  - Version: 1.78.2 (user setup)
-  - Commit: b3e4e68a0bc097f0ae7907b217c1119af9e03435
-  - Date: 2023-05-10T14:39:26.248Z
-  - Electron: 22.5.2
-  - Chromium: 108.0.5359.215
-  - Node.js: 16.17.1
-  - V8: 10.8.168.25-electron.0
+  - Version: 1.82.1 (user setup)
+  - Commit: 6509174151d557a81c9d0b5f8a5a1e9274db5585
+  - Date: 2023-09-08T08:45:05.575Z
+  - Electron: 25.8.0
+  - Chromium: 114.0.5735.289
+  - Node.js: 18.15.0
+  - V8: 11.4.183.29-electron.0
   - OS: Windows_NT x64 10.0.19045
-  - Sandboxed: Yes
 - Chrome (für PDFs und Dokumentation)
-  - Version: 114.0.5735.134 (Official Build) (64-bit)
+  - Version: 117.0.5938.63 (Official Build) (64-bit)
+- Node.js (für das Projekt)
+  - Version: v16.15.1
 
 ## Entscheiden
 
@@ -151,6 +155,12 @@ In Sachen Testing gibt es zwei bereiche, für die wir uns hier Interessieren; Da
 
 Damit wir in der Gruppe dieselben Code-Konventionen einhalten können, möchten wir auch [ESlint](https://eslint.org) und [Prettier](https://prettier.io/) integrieren. Das nicht nur lokal, sondern auch in der Pipeline, damit nur sauberer Code in die Cloud kommt.
 
+### Sollen wir Git-Hooks verwenden?
+
+Wir haben in der Zwischenzeit über Git-Hooks im Modul 324 gelernt. Wir haben uns dafür entschieden, diese für das Code-Styling zu verwenden. So ist es nicht möglich, nicht den Konventionen entsprechenden Code einzubuchen, da vor jedem Commit formatiert und dann gelintet wird.
+
+Für die pre-Commit Hooks wird [Husky](https://www.npmjs.com/package/husky) verwendet. So kann das Script einfach von Menschen gelesen und bearbeitet werden, ohne in das `.git/hooks/` directory wechseln zu müssen. Das Aufsetzen in einer frisch gecloneten Repository ist auch schnell gemacht mit `npm run prepare`.
+
 ## Realisieren
 
 ### Hilfestellung
@@ -161,7 +171,9 @@ So konnten wir schlussendlich alle Hürden, die während der Implementation aufg
 
 ### Was wurde realisiert?
 
-Die Anwendung . . .
+Die Anwendung, die realisiert wurde, besteht aus einem Svelte-Kit Projekt, das Fragen von einer API lädt und diese darstellt als Komponenten.
+
+Für die Implementierung dieser Anwendung wurden diverse Pipelines für die CI und CD aufgesetzt. Zu diesen gehören zum Beispiel das Testen vor dem Mergen einer PR und das automatische Deployen, sobald etwas neues eingetragen wurde. Ausserdem wurde noch ein pre-Commit Hook eingebunden, damit der Code vor jedem Commit formatiert und gelintet werden kann.
 
 ### Vorgehen bei der Realisierung
 
@@ -179,7 +191,7 @@ Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änd
 | 1   | 17.08.2023 | Informieren (von IPERKA): Technologien, Quellen und Informationen heraussuchen, Ziele setzen                        | 10            | 10             |
 | 2   | 31.08.2023 | Planen und Entscheiden (von IPERKA): Zeitplan & Tests erstellen (manuell & automatisch), über Optionen entscheiden | 10            | 10             |
 | 3.1 | 7.09.2023  | Realisieren (von IPERKA): DevOps-Pipelines aufsetzen                                                                | 15            | 10             |
-| 3.2 | 14.09.2023 | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11            |                |
+| 3.2 | 14.09.2023 | Realisieren (von IPERKA): Webapp implementieren                                                                     | 11            | 13             |
 | 4   | 21.09.2023 | Kontrollieren (von IPERKA): Alle Tests ausführen, protokollieren & Testbericht verfassen                           | 4             |                |
 | 5   | 21.09.2023 | Auswerten (von IPERKA): Reflexion auf das Projekt                                                                   | 4             |                |
 | 6   | 21.09.2023 | Portfolioeintrag bis am Abend                                                                                       | 6 (ggf. mehr) |                |
