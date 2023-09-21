@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-
+	// eslint-disable-next-line
 	let triviaQuestions: any[] = [];
 
 	onMount(async () => {
@@ -36,12 +36,6 @@
 			</div>
 		{/each}
 	</div>
-
-	<script>
-		function refreshPage() {
-			window.location.reload();
-		}
-	</script>
 </div>
 
 <style>
