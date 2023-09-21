@@ -6,8 +6,8 @@
 
 <header>
 	<div class="corner">
-		<a href="https://github.com/mnaray/DevOps-webapp">
-			<img src={logo} alt="SvelteKit" />
+		<a href="https://github.com/sveltejs/kit">
+			<img src={logo} alt="GitHub Svelte-Kit" />
 		</a>
 	</div>
 
@@ -32,8 +32,8 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
-			<img src={github} alt="GitHub" />
+		<a href="https://github.com/mnaray/DevOps-webapp">
+			<img src={github} alt="GitHub DevOps-Webapp" />
 		</a>
 	</div>
 </header>
