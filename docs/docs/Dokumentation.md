@@ -213,13 +213,26 @@ Im letzten Schritt wurde jeweils nach dem Merge die Dokumentation, falls es Änd
 ### Testprotokoll
 
 
-| <br />Test-Nr. | Bemerkung | Resultat | Datum | Visum |
-| ---------------- | ----------- | ---------- | ------- | ------- |
-|                |           |          |       |       |
+| <br />Test-Nr. | Bemerkung                                   | Resultat | Datum      | Visum |
+| ---------------- | --------------------------------------------- | ---------- | ------------ | ------- |
+| 1              |                                             | OK       | 21.09.2023 | MN    |
+| 2              |                                             | OK       | 21.09.2023 | MN    |
+| 3              |                                             | OK       | 21.09.2023 | MN    |
+| 4              |                                             | OK       | 21.09.2023 | MN    |
+| 5              |                                             | OK       | 21.09.2023 | MN    |
+| 6.1            | Ohne Snyk ausgeführt.                      | OK       | 21.09.2023 | MN    |
+| 6.2            | Ohne Snyk ausgeführt.                      | OK       | 21.09.2023 | MN    |
+| 7              | Nicht ausgeführt, da nichts implementiert. | NOK      | 21.09.2023 | MN    |
+| 8              |                                             | OK       | 21.09.2023 | MN    |
+| 9              |                                             | OK       | 21.09.2023 | MN    |
+| 10             |                                             | OK       | 21.09.2023 | MN    |
+| 11             |                                             | OK       | 21.09.2023 | MN    |
 
 ### Testfazit
 
-. . .
+Die Tests konnten alle erfolgreich durchgeführt werden. Nur die Teile, die Snyk brauchten konnten nicht implementiert und somit auch nicht getestet werden.
+
+Dies soll noch bei einer zukünftigen Gelegenheit erweitert werden.
 
 ## Auswerten
 
